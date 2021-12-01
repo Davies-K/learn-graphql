@@ -20,26 +20,26 @@ class _CompletedState extends State<Completed> {
             todoList.addTodo(value);
           },
         ),
-        Expanded(
-          child: ListView.builder(
-            itemCount: todoList.completeList.length,
-            itemBuilder: (context, index) {
-              return TodoItemTile(
-                item: todoList.completeList[index],
-                delete: () {
-                  setState(() {
-                    todoList.removeTodo(todoList.completeList[index].id);
-                  });
-                },
-                toggleIsCompleted: () {
-                  setState(() {
-                    todoList.toggleList(todoList.completeList[index].id);
-                  });
-                },
-              );
-            },
-          ),
-        ),
+        // Expanded(
+        //   child: ListView.builder(
+        //     itemCount: todoList.completeList.length,
+        //     itemBuilder: (context, index) {
+        //       return TodoItemTile(
+        //         item: todoList.completeList[index],
+        //         delete: () {
+        //           setState(() {
+        //             todoList.removeTodo(todoList.completeList[index].id);
+        //           });
+        //         },
+        //         toggleIsCompleted: () {
+        //           setState(() {
+        //             todoList.toggleList(todoList.completeList[index].id);
+        //           });
+        //         },
+        //       );
+        //     },
+        //   ),
+        // ),
       ],
     );
   }

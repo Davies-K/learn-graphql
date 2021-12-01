@@ -77,6 +77,7 @@ class _LoginState extends State<Login> {
                             passwordController.text,
                           );
                           if (_token != null) {
+                            print(_token);
                             UtilFs.showToast("Login Successful", context);
                             await sharedPreferenceService.setToken(_token);
                             Navigator.pushReplacementNamed(
